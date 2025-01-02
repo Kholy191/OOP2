@@ -19,6 +19,20 @@ namespace Assignment
             //}
             #endregion
 
+            #region Q2 Define a struct "Person" with properties "Name" and "Age". Create an array of three "Person" objects and populate it with data. Then, write a C# program to display the details of all the persons in the array.
+
+            //Person[] people = new Person[3];
+            //people[0] = new Person("Ahmed" , 25);
+            //people[1] = new Person("Mahmoud", 33);
+            //people[2] = new Person("Adel", 56);
+
+            //for (int i = 0; i < people.Length; i++)
+            //{
+            //    Console.WriteLine(people[i].ToString());
+            //}
+            #endregion Define a struct "Person" with properties "Name" and "Age". Create an array of three "Person" objects and populate it with data. Then, write a C# program to display the details of all the persons in the array. 
+
+
 
         }
     }
@@ -27,6 +41,24 @@ namespace Assignment
     public enum WeekDays
     {
         Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+    }
+    #endregion
+
+    #region Q2
+    public struct Person
+    {
+        private string Name;
+        private int Age;
+
+        public Person(string str, int Num)
+        {
+            Name = str;
+            Age = Num;
+        }
+        public override string ToString()
+        {
+            return $"Name: {this.Name}, Age: {this.Age}";
+        }
     }
     #endregion
 
