@@ -107,7 +107,25 @@ namespace Assignment
             //pesrsons[0].OldestPerson(pesrsons[1], pesrsons[2]);
             #endregion
 
+            #region Q1 part 2 Design and implement a Class for the employees in a company:
+            //Employee.Hiring_Date hireDate1 = new Employee.Hiring_Date(12, 5, 2015);
+            //Employee.Hiring_Date hireDate2 = new Employee.Hiring_Date(2, 3, 2018);
+            //Employee.Hiring_Date hireDate3 = new Employee.Hiring_Date(10, 8, 2020);
 
+            //// Creating Employee objects
+            //Employee emp1 = new Employee(1, "Ahmed", Employee.Gender.M, 55000, hireDate1, Employee.Security.DBA);
+            //Employee emp2 = new Employee(2, "Mahmoud", Employee.Gender.M, 40000, hireDate2, Employee.Security.Guest);
+            //Employee emp3 = new Employee(3, "Ali", Employee.Gender.M, 70000, hireDate3, Employee.Security.SecurityOfficer);
+
+            //// Array of Employees
+            //Employee[] EmpArr = new Employee[] { emp1, emp2, emp3 };
+
+            //// Displaying all employees in the array
+            //foreach (var emp in EmpArr)
+            //{
+            //    Console.WriteLine(emp.ToString());
+            //}
+            #endregion
 
         }
     }
@@ -214,7 +232,66 @@ namespace Assignment
     }
     #endregion
 
+    #region Q1 part 2
+    public class Employee
+    {
+        private int Id { get; set; }
+        private string Name { get; set; }
+        private Security Securitylevel { get; set; }
+        private int Salary { get; set; }
+        private Hiring_Date HireDate { get; set; }
+        private Gender gender { get; set; }
 
+        public Employee(int id, string name, Gender gend, int salary, Hiring_Date hiredate, Security secure)
+        {
+            Id = id;
+            Name = name;
+            Securitylevel = secure;
+            Salary = salary;
+            HireDate = hiredate;
+            gender = gend;
+
+        }
+
+        #region  Q2 Develop a Class to represent the Hiring Date Data:
+        public class Hiring_Date
+        {
+            int Day { get; set; }
+            int Month { get; set; }
+            int Year { get; set; }
+            public Hiring_Date(int day, int month, int year)
+            {
+                Day = day;
+                Month = month;
+                Year = year;
+            }
+
+            public override string ToString()
+            {
+                return $"day {Day} , month : {Month} , year :{Year}";
+            }
+        }
+        #endregion
+
+        #region Q3 We need to restrict the Gender field to be only M or F [Male or Female] 
+        public enum Gender
+        {
+            M, F
+        }
+        #endregion
+
+        #region Q4 Assign the following security privileges to the employee (guest, Developer, secretary and DBA) in a form of Enum
+        public enum Security
+        {
+            Guest, Developer, secretary, DBA, SecurityOfficer
+        }
+        public override string ToString()
+        {
+            return $"ID: {Id}, Name: {Name}, Gender: {gender}, Salary: {String.Format("{0:C}", Salary)} Hire Date: {HireDate.ToString()}, Security Level: {Securitylevel}";
+        }
+        #endregion
+    }
+    #endregion
 
 
 
