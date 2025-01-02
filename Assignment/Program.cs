@@ -61,6 +61,18 @@ namespace Assignment
             #endregion
 
 
+            #region Q4 Assign the following Permissions (Read, write, Delete, Execute) in a form of Enum.
+            //Permissions_ MyPremission = Permissions_.None;
+            ///*For Adding*/
+            //MyPremission |= Permissions_.Execute;
+            //Console.WriteLine(MyPremission);
+            ///*For Removing*/
+            //MyPremission &= ~Permissions_.Read;
+            ///* is existed */
+            //bool isExisted = (MyPremission & Permissions_.Execute) == Permissions_.Execute;
+            //Console.WriteLine(isExisted);
+            #endregion
+
         }
     }
 
@@ -96,12 +108,12 @@ namespace Assignment
     }
     #endregion
 
-    #region Q4
-    [Flags]
-    public enum Permissions
-    {
-        None, Read, write, Delete, Execute
-    }
+    #region Q4 Q4
+    //[Flags]
+    //public enum Permissions_
+    //{
+    //    None, Read, write, Delete, Execute
+    //}
     #endregion
 
 
