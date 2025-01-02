@@ -94,6 +94,19 @@ namespace Assignment
             //Console.WriteLine(distance);
             #endregion
 
+            #region Q7 Create a struct called "Person" with properties "Name" and "Age". Write a C# program that takes details of 3 persons as input from the user and displays the name and age of the oldest person.
+            //PersonQ7[] pesrsons = new PersonQ7[3];
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Console.WriteLine("Enter Age of person");
+            //    int.TryParse(Console.ReadLine(), out int Num);
+            //    Console.WriteLine("Enter Name of person");
+            //    pesrsons[i] = new PersonQ7(Console.ReadLine() ?? "", Num);
+            //}
+            //pesrsons[0].OldestPerson(pesrsons[1], pesrsons[2]);
+            #endregion
+
 
 
         }
@@ -166,6 +179,42 @@ namespace Assignment
         }
     }
     #endregion
+
+    #region Q7
+    public struct PersonQ7
+    {
+        private string Name;
+        private int Age;
+
+        public PersonQ7(string str, int Num)
+        {
+            Name = str;
+            Age = Num;
+        }
+        public override string ToString()
+        {
+            return $"Name: {this.Name}, Age: {this.Age}";
+        }
+        public void OldestPerson(PersonQ7 P1, PersonQ7 P2)
+        {
+            PersonQ7 oldest = this;
+
+            if (P1.Age > oldest.Age)
+            {
+                oldest = P1;
+            }
+
+            if (P2.Age > oldest.Age)
+            {
+                oldest = P2;
+            }
+
+            Console.WriteLine($"Oldest Person: {oldest}");
+        }
+    }
+    #endregion
+
+
 
 
 
