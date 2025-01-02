@@ -87,6 +87,13 @@ namespace Assignment
             //}
             #endregion
 
+            #region Q6 Create a struct called "Point" to represent a 2D point with properties "X" and "Y". Write a C# program that takes two points as input from the user and calculates the distance between them.
+            //Point p1 = new Point(1,3);
+            //Point p2 = new Point(5,3);
+            //double distance = p1.GetDistance(p2);
+            //Console.WriteLine(distance);
+            #endregion
+
 
 
         }
@@ -137,6 +144,26 @@ namespace Assignment
     public enum PrimaryColors
     {
         None, Red, Green, Blue
+    }
+    #endregion
+
+    #region Q6 
+    public struct Point
+    {
+        private double X;
+        private double Y;
+        public Point(double x, double y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        public double GetDistance(Point p)
+        {
+            double dx = p.X - X;
+            double dy = p.Y - Y;
+            return Math.Sqrt(dx * dx + dy * dy);
+        }
     }
     #endregion
 
