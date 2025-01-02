@@ -32,6 +32,33 @@ namespace Assignment
             //}
             #endregion Define a struct "Person" with properties "Name" and "Age". Create an array of three "Person" objects and populate it with data. Then, write a C# program to display the details of all the persons in the array. 
 
+            #region Q3 Create an enum called "Season" with the four seasons (Spring, Summer, Autumn, Winter) as its members. Write a C# program that takes a season name as input from the user and displays the corresponding month range for that season. Note range for seasons ( spring march to may , summer june to august , autumn September to November , winter December to February)
+
+            //Season season1 = Season.Autumn;
+            //Boolean Flag = Enum.TryParse<Season>(Console.ReadLine(), true, out season1);
+            //if (Flag == true)
+            //{
+            //    switch ((int)season1)
+            //    {
+            //        case 0:
+            //            Console.WriteLine("spring march to may");
+            //            break;
+            //        case 1:
+            //            Console.WriteLine(" summer june to august");
+            //            break;
+            //        case 2:
+            //            Console.WriteLine("autumn September to November");
+            //            break;
+            //        case 3:
+            //            Console.WriteLine("winter December to February");
+            //            break;
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Failed");
+            //}
+            #endregion
 
 
         }
@@ -62,7 +89,20 @@ namespace Assignment
     }
     #endregion
 
+    #region Q3
+    public enum Season
+    {
+        Spring, Summer, Autumn, Winter
+    }
+    #endregion
 
+    #region Q4
+    [Flags]
+    public enum Permissions
+    {
+        None, Read, write, Delete, Execute
+    }
+    #endregion
 
 
 }
